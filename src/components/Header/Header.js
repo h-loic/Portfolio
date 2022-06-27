@@ -1,5 +1,7 @@
 import React from 'react'
 import './header.scss'
+import {BsGithub} from 'react-icons/bs'
+import {BsLinkedin} from 'react-icons/bs'
 
 export default function Header() {
   return (
@@ -8,8 +10,12 @@ export default function Header() {
 		<div className="responsive-container">
 			<h1>Loïc Hug</h1>
             <nav>
-                <a href="/">Accueil</a>
-                <a href="/shoppingCart">Mon panier</a>
+                <a href="/">
+                    <BsGithub size={28} className='center'/>
+                </a>
+                <a href="/">
+                    <BsLinkedin size={28} className='center'/>
+                </a>
             </nav>
 		</div>
 	</header>

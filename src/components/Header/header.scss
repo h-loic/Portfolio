@@ -21,8 +21,13 @@
     }
 }
 
+.center {
+    text-align: center;
+    vertical-align :middle;
+}
+
 .responsive-container {
-    width: 95%;
+    width: 96%;
     margin: auto;
 }
 
@@ -30,10 +35,10 @@
 	float: left;
 	margin: 0;
 	padding: 0 15px;
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 56px;
 	font-weight: 400;
-	color: #FFF;
+    color: rgb(223, 223, 223);
 }
 
 .header nav {
@@ -45,9 +50,9 @@
 	display: inline-block;
 	height: 56px;
 	line-height: 56px;
-	padding: 0 15px;
+	padding: 0 1em;
 	min-width: 50px;
 	text-align: center;
 	text-decoration: none;
-	color: #FFF;
+	color: rgb(223, 223, 223);
 }
