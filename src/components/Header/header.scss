@@ -1,0 +1,53 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0;
+	background: none;
+	z-index: 50;
+    justify-content: center;
+}
+
+@media (min-width: 0rem) {
+    .header-margin{
+        height: 0.5em;
+    }
+}
+
+@media (min-width: 50rem) {
+    .header-margin{
+        height: 1.5em;
+    }
+}
+
+.responsive-container {
+    width: 95%;
+    margin: auto;
+}
+
+.header h1 {
+	float: left;
+	margin: 0;
+	padding: 0 15px;
+	font-size: 24px;
+	line-height: 56px;
+	font-weight: 400;
+	color: #FFF;
+}
+
+.header nav {
+	float: right;
+	font-size: 100%;
+}
+
+.header nav a {
+	display: inline-block;
+	height: 56px;
+	line-height: 56px;
+	padding: 0 15px;
+	min-width: 50px;
+	text-align: center;
+	text-decoration: none;
+	color: #FFF;
+}
