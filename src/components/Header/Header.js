@@ -38,7 +38,7 @@ export default function Header() {
                     </nav>
                 </div>
             </header>
-                <div id="myNav" className="overlay"         
+                <div id="myNav" className="overlay no-scrollbar"         
                     style={{
                         height : isOpen ? "100%" : "0%"
                     }}>

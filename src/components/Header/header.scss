@@ -2,7 +2,7 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	padding: 0;
 	background: none;
 	z-index: 50;
@@ -162,7 +162,15 @@
     cubic-bezier(0.04,0.04,0.12,0.96);
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 
 /* The Overlay (background) */
@@ -178,6 +186,7 @@
     background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    scrollbar-width: 0px;
 }
 
 /* Position the content inside the overlay */

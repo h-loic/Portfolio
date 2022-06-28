@@ -6,6 +6,7 @@ export default function Projects() {
 
     return (
         <div id="project-part">
+             <span>Projects</span>
         </div>
     )
 }
