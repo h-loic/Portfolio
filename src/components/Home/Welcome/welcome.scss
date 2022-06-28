@@ -1,15 +1,28 @@
 #welcome-part{
     height: 100vh;
     color: #7BD3E3;
+    display: inline;
 }
 
 .title {
-    margin-top: 30vh;
+    margin-top: 20vh;
     height: 20vh;
-    margin-left: 10vw;
+} 
+.floating-words{
+    margin-top: 5vh;
+    height: 42vh;
 }
 
 .name {
     font-weight: bold;
     border-bottom: 3px solid #7BD3E3;
+}
+
+.picture {
+    border: white 5px dashed;
+}
+
+.word1{
+    position: absolute;
+    margin-left: 5vh;
 }
