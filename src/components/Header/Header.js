@@ -18,15 +18,15 @@ export default function Header() {
                 <div className="responsive-container">
                     <h1>Loïc Hug</h1>
                     <nav>
-                        <a href="/" className='nav-item'>
+                        <a href="https://github.com/h-loic" className='nav-item'>
                             <BsGithub size={28} className='center'/>
                         </a>
-                        <a href="/" className='nav-item'>
+                        <a href="https://www.linkedin.com/in/lo%C3%AFc-hug-08b2b7183/" className='nav-item'>
                             <BsLinkedin size={28} className='center'/>
                         </a>
                         <a className='center nav-button' href='/'>
                             <input type="checkbox" id="menu-toggle" onClick={toggleMenu}/>
-                            <label htmlFor="menu-toggle" className="hamburger center">
+                            <label htmlFor="menu-toggle" className="hamburger">
                                 <span className="bun bun-top">
                                     <span className="bun-crust bun-crust-top"></span>
                                 </span>
@@ -49,8 +49,8 @@ export default function Header() {
                         <a href="/">Me contacter</a>
                         <div className='row menu-icons'>
                             <div className='col-3'/>
-                            <a href='/zd' className='col-3'><BsGithub size={28} className='icon'/></a>
-                            <a href='/zd' className='col-3'><BsLinkedin size={28} className='icon'/></a>
+                            <a href='https://github.com/h-loic' className='col-3'><BsGithub size={28} className='icon'/></a>
+                            <a href='https://www.linkedin.com/in/lo%C3%AFc-hug-08b2b7183/' className='col-3'><BsLinkedin size={28} className='icon'/></a>
                             <div className='col-3'/>
                         </div>
                     </div>
