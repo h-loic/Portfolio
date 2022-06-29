@@ -1,0 +1,73 @@
+#skills-part{
+    height: 100vh;
+    color: #7BD3E3;
+}
+
+@media (min-width: 0rem) {
+    .box{
+        height: 60vh;
+        width: 60vw;
+        padding: 40px 20px 0px 20px;
+        background:linear-gradient(45deg, RGB(253, 127, 176), RGB(255, 172, 124));
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        box-sizing: border-box;
+    }  
+    .vertical-align{
+        margin-top: 25vh;
+        text-align: center;
+    }
+    .icons-margin{
+        margin-top: 2vh;
+    }
+    .w-33{
+        width: 50%;
+    }
+}
+
+@media (min-width: 50rem) {
+    .box{
+        height: 65vh;
+        width: 80vh;
+        padding: 40px 20px 0px 20px;
+        background:linear-gradient(45deg, RGB(253, 127, 176), RGB(255, 172, 124));
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+    .vertical-align{
+        margin-top: 25vh;
+        text-align: center;
+    }
+    .icons-margin{
+        margin-top: 5vh;
+    }
+    .w-33{
+        width: 33%;
+    }
+}
+
+.list-box-container{
+    overflow-inline: hidden;
+    display: inline-block;
+}
+
+.box-container{
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items:center;
+}
+
+.z-1{
+    z-index: 1;
+}
+
+.z-2{
+    z-index: 2;
+}

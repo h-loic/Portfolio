@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header'
 import ReactPageScroller from 'react-page-scroller';
 import Projects from '../../components/Home/Projects/Projects'
 import Welcome from '../../components/Home/Welcome/Welcome'
+import Skills from '../../components/Home/Skills/Skills';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -31,7 +32,8 @@ export default class Home extends React.Component {
             onBeforePageScroll={this.handleBeforePageChange}
             customPageNumber={this.state.currentPage}
           >
-            <Welcome />
+            <Welcome/>
+            <Skills/>
             <Projects />
           </ReactPageScroller>
         </React.Fragment>

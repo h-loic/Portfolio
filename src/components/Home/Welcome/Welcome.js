@@ -30,9 +30,9 @@ export default function Welcome() {
                 </div>
                 <div className='col-12 col-md-7'></div>
                 <div className='col-12 text-center'>
-                        <div>scroll to see more</div>
-                        <IoMdCodeDownload size={28} className='center'/>
-                    </div>
+                    <div>scroll to see more</div>
+                    <IoMdCodeDownload size={28} className='center'/>
+                </div>
             </div>
         </div>
     )
