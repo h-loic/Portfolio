@@ -6,6 +6,8 @@ import ReactPageScroller from 'react-page-scroller';
 import Projects from '../../components/Home/Projects/Projects'
 import Welcome from '../../components/Home/Welcome/Welcome'
 import Skills from '../../components/Home/Skills/Skills';
+import Contact from '../../components/Home/Contact/Contact';
+import About from '../../components/Home/About/About';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -25,7 +27,7 @@ export default class Home extends React.Component {
 
     return (
       <div className='home-container'>
-        <Header/>
+        <Header goToPage={this.handlePageChange}/>
         <React.Fragment>
           <ReactPageScroller
             pageOnChange={this.handlePageChange}
@@ -34,7 +36,9 @@ export default class Home extends React.Component {
           >
             <Welcome/>
             <Skills/>
-            <Projects />
+            <Projects/>
+            <About/>
+            <Contact/>
           </ReactPageScroller>
         </React.Fragment>
       </div>

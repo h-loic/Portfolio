@@ -4,9 +4,16 @@ import {BsGithub} from 'react-icons/bs'
 import {BsLinkedin} from 'react-icons/bs'
 import {AiOutlineDownload} from 'react-icons/ai'
 
-export default function Header() {
+export default function Header(props) {
 
     const [isOpen,setIsOpen] = useState(false);
+    const [checked, setChecked] = useState(false);
+
+    const goToPage = (pageNumber) => {
+        setChecked(false)
+        toggleMenu();
+        props.goToPage(pageNumber);
+      }
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -30,7 +37,7 @@ export default function Header() {
                             <AiOutlineDownload size={28} className='center'/>
                         </a>
                         <a className='center nav-button' href='/'>
-                            <input type="checkbox" id="menu-toggle" onClick={toggleMenu}/>
+                            <input type="checkbox" id="menu-toggle" onClick={toggleMenu} checked={checked} onChange={() => setChecked(!checked)} />
                             <label htmlFor="menu-toggle" className="hamburger">
                                 <span className="bun bun-top">
                                     <span className="bun-crust bun-crust-top"></span>
@@ -48,17 +55,19 @@ export default function Header() {
                         height : isOpen ? "100%" : "0%"
                     }}>
                     <div className="overlay-content">
-                        <a href="/">Mes projets</a>
-                        <a href="/">Mes compétences</a>
-                        <a href="/">A propos de moi</a>
-                        <a href="/">Me contacter</a>
+                        <span onClick={() => goToPage(1)}>My Skills</span>
+                        <span onClick={() => goToPage(2)}>My Projects</span>
+                        <span onClick={() => goToPage(3)}>About Me</span>
+                        <span onClick={() => goToPage(4)}>Conctact Me</span>
                         <div className='row menu-icons'>
                             <div className='col-1'/>
                             <a href='https://github.com/h-loic' className='col-3'><BsGithub size={28} className='icon'/></a>
                             <a href='https://www.linkedin.com/in/lo%C3%AFc-hug-08b2b7183/' className='col-3'><BsLinkedin size={28} className='icon'/></a>
-                            <a href={require("../../assets/files/CV.pdf")} className='col-4' download="LOIC_HUG_CV.pdf">
-                                <span className='cv center'>CV</span>
-                                <AiOutlineDownload size={28} className='center'/>
+                            <a href={require("../../assets/files/CV.pdf")} className='col-4 container m-0 p-0' download="LOIC_HUG_CV.pdf">
+                                <div className='row m-0 p-0'>
+                                    <span className='cv col-5 center mr-0'>CV</span>
+                                    <AiOutlineDownload size={28} className='col-5 ml-0 center m-auto'/>
+                                </div>
                             </a>
                             <div className='col-1'/>
                         </div>
