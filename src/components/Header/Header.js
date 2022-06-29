@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './header.scss'
 import {BsGithub} from 'react-icons/bs'
 import {BsLinkedin} from 'react-icons/bs'
+import {AiOutlineDownload} from 'react-icons/ai'
 
 export default function Header() {
 
@@ -23,6 +24,10 @@ export default function Header() {
                         </a>
                         <a href="https://www.linkedin.com/in/lo%C3%AFc-hug-08b2b7183/" className='nav-item'>
                             <BsLinkedin size={28} className='center'/>
+                        </a>
+                        <a href={require("../../assets/files/CV.pdf")} className='nav-item' download="LOIC_HUG_CV.pdf">
+                            <span className='cv center'>CV</span>
+                            <AiOutlineDownload size={28} className='center'/>
                         </a>
                         <a className='center nav-button' href='/'>
                             <input type="checkbox" id="menu-toggle" onClick={toggleMenu}/>
@@ -48,10 +53,14 @@ export default function Header() {
                         <a href="/">A propos de moi</a>
                         <a href="/">Me contacter</a>
                         <div className='row menu-icons'>
-                            <div className='col-3'/>
+                            <div className='col-1'/>
                             <a href='https://github.com/h-loic' className='col-3'><BsGithub size={28} className='icon'/></a>
                             <a href='https://www.linkedin.com/in/lo%C3%AFc-hug-08b2b7183/' className='col-3'><BsLinkedin size={28} className='icon'/></a>
-                            <div className='col-3'/>
+                            <a href={require("../../assets/files/CV.pdf")} className='col-4' download="LOIC_HUG_CV.pdf">
+                                <span className='cv center'>CV</span>
+                                <AiOutlineDownload size={28} className='center'/>
+                            </a>
+                            <div className='col-1'/>
                         </div>
                     </div>
                 </div>

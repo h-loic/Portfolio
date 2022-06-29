@@ -44,7 +44,7 @@ export default class Skills extends Component {
                         </div>
                         <div className='box'>
                             <div className='row d-flex'>
-                                <div className='col-12 text-center h3'>Database</div>
+                                <div className='col-12 text-center h3'>Databases</div>
                                 <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/mongodb.webp")}/></div>
                                 <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/mysql.png")}/></div>
                                 <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/firebase.png")}/></div>
