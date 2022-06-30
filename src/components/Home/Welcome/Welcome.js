@@ -16,8 +16,9 @@ export default function Welcome() {
                         </span><br/>
                         <span className='h2'>
                             <Typical
-                                steps={['Software Engineer', 1000, 'Software Engineer soon', 5000]}
-                                loop={Infinity}
+                                steps={['Software Engineer', 2000, 'Software Engineer soon']}
+                                loop={1}
+                                wrapper="p"
                                 className='mt-5'
                             />
                         </span>

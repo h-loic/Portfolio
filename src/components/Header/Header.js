@@ -58,7 +58,7 @@ export default function Header(props) {
                         <span onClick={() => goToPage(1)}>My Skills</span>
                         <span onClick={() => goToPage(2)}>My Projects</span>
                         <span onClick={() => goToPage(3)}>About Me</span>
-                        <span onClick={() => goToPage(4)}>Conctact Me</span>
+                        <span onClick={() => goToPage(4)}>Contact Me</span>
                         <div className='row menu-icons'>
                             <div className='col-1'/>
                             <a href='https://github.com/h-loic' className='col-3'><BsGithub size={28} className='icon'/></a>

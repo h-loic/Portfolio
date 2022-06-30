@@ -1,3 +1,94 @@
 #project-part{
     height: 100vh;
 }
+
+.content-part{
+    height: 75vh;
+}
+
+.footer{
+    height: 5vh;
+}
+
+.light-grey{
+    color: #839192;
+}
+
+.light-blue{
+    color: #7BD3E3;
+}
+
+.blue-border{
+    border: solid 2px #7BD3E3;
+    height: 10vh;
+    border-radius: 3px;
+}
+
+.contact-text{
+    font-size: 0.7em;
+}
+
+.contact-info-text{
+    font-size: 1em;
+}
+
+input{
+    border: solid 2px #7BD3E3;
+    border-radius: 3px;
+    background-color: rgb(1,24,50);
+    width: 100%;
+    color: #7BD3E3;
+}
+
+textarea{
+    border: solid 2px #7BD3E3;
+    border-radius: 3px;
+    background-color: rgb(1,24,50);
+    width: 100%;
+    color: #7BD3E3;
+}
+
+input::placeholder{
+    color: #7BD3E3;
+    font-size: 1.5em;
+}
+
+.wrapper{
+    a{
+        display: block;
+        width: 100%;
+        height: 1.5em;
+        font-size: 18px;
+        text-decoration: none;
+        color: #7BD3E3;
+        border: 2px solid #7BD3E3;
+        letter-spacing: 2px;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+      }
+      
+      a span{
+        position: relative;
+        z-index: 2;
+      }
+      
+      a:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: rgb(228, 129, 129);
+        transition: all .35s;
+      }
+      a:hover{
+        color: rgb(15, 1, 1);
+      }
+      
+      a:hover:after{
+        width: 100%;
+      }
+  }
+  
