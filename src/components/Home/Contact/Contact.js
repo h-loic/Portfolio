@@ -1,9 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contact.scss'
 import {GoLocation} from 'react-icons/go'
 import {MdMailOutline} from 'react-icons/md'
 
 export default function Contact() {
+
+    const [name,setName] = useState("");
+    const [nameError,setNameError] = useState("");
+    const [mail,setMail] = useState("");
+    const [mailError,setMailError] = useState("");
+    const [mailContent,setMailContent] = useState("");
+    const [mailContentError,setMailContentError] = useState("");
+    const [validation,setValidation] = useState("");
+
+    const checkMailFormat = ( email ) => {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email)
+    }
+
+    const sendMail = () => {
+        setValidation("");
+        let error = false;
+        if(name === ""){
+            setNameError("your name is mandatory");
+            error = true;
+        }else{
+            setNameError("");
+        }
+        if(mail === ""){
+            setMailError("your mail is mandatory");
+            error = true;
+        }else if (!checkMailFormat(mail)){
+            setMailError("enter a valid e-mail format");
+            error = true;
+        }else{
+            setMailError("");
+        }
+        if(mailContent === ""){
+            setMailContentError("the mail content is mandatory");
+            error = true;
+        }else{
+            setMailContentError("");
+        }
+        if(!error){
+            console.log("send mail")
+            setName("");
+            setMail("");
+            setMailContent("");
+            setValidation("thank you for your interest, your has been sent !")
+        }
+    }
 
     return (
         <div id="contact-part">
@@ -39,14 +85,18 @@ export default function Contact() {
                     <div className='col-1 col-md-2'></div>
                     <div className='col-10 col-md-8 light-blue'>
                         <span className=''>Name</span>
-                        <input className='input mb-3' />
+                        <input className='input' value={name} onChange={e => setName(e.target.value)}/>
+                        <span className='text-danger mb-3'>{nameError}</span><br/>
                         <span className=''>e-mail</span>
-                        <input className='input mb-3' />
+                        <input className='input' value={mail} onChange={e => setMail(e.target.value)}/>
+                        <span className='text-danger mb-3'>{mailError}</span><br/>
                         <span className=''>message</span>
-                        <textarea className='input h-50 mb-3' />
-                        <div class="wrapper w-100">
-                            <a href="#"><span>Send</span></a>
+                        <textarea className='input text-area-height' value={mailContent} onChange={e => setMailContent(e.target.value)}/>
+                        <span className='text-danger mb-3'>{mailContentError}</span><br/>
+                        <div className="wrapper w-100">
+                            <button onClick={() => sendMail()}><span>Send</span></button>
                         </div>
+                        <span className='text-success mb-3'>{validation}</span>
                     </div>
                     <div className='col-1 col-md-2'></div>
                 </div> 

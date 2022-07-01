@@ -15,6 +15,10 @@ export default function Header(props) {
         props.goToPage(pageNumber);
       }
 
+      const goHome = () =>{
+        props.goToPage(0);
+      }
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     }
@@ -24,7 +28,7 @@ export default function Header(props) {
             <header className="header">
                 <div className='header-margin'></div>
                 <div className="responsive-container">
-                    <h1>Loïc Hug</h1>
+                    <h1 onClick={() => goHome()}>Loïc Hug</h1>
                     <nav>
                         <a href="https://github.com/h-loic" className='nav-item'>
                             <BsGithub size={28} className='center'/>
@@ -55,6 +59,7 @@ export default function Header(props) {
                         height : isOpen ? "100%" : "0%"
                     }}>
                     <div className="overlay-content">
+                        <span onClick={() => goToPage(0)}>Home</span>
                         <span onClick={() => goToPage(1)}>My Skills</span>
                         <span onClick={() => goToPage(2)}>My Projects</span>
                         <span onClick={() => goToPage(3)}>About Me</span>
