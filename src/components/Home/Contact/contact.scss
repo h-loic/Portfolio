@@ -54,6 +54,9 @@ input::placeholder{
 }
 
 .wrapper{
+
+    text-align: center;
+
     button{
         display: block;
         width: 100%;
@@ -104,4 +107,10 @@ input::placeholder{
         height: 80%;
       }
 }
+
+.loader{
+    width: 2em;
+    height: 2em;
+    display:inline-block;
+  }
   
