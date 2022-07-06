@@ -93,9 +93,9 @@ export default class Skills extends Component {
                             <div className='row d-flex'>
                                 <div className='col-12 text-center h3'>Languages</div>
                                 <div className='col-12 text-center icons-margin'>French Native</div>
-                                <div className='col-12 text-center icons-margin'>English B2</div>
+                                <div className='col-12 text-center icons-margin'>English B2 (2021)</div>
                                 <div className='col-12 text-center'><img className='w-33' alt='icon' src={require("../../../assets/img/icons/linguaskill.jpg")}/></div>
-                                <div className='col-12 text-center icons-margin'>German B1</div>
+                                <div className='col-12 text-center icons-margin'>German B1 (2015)</div>
                                 <div className='col-12 text-center'><img className='w-33' alt='icon' src={require("../../../assets/img/icons/kmk.jpg")}/></div>
                             </div>
                         </div>

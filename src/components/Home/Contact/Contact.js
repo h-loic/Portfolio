@@ -99,13 +99,13 @@ export default function Contact() {
                     <div className='col-10 col-md-8 light-blue'>
                         <span className=''>Name</span>
                         <input className='input' name="name" value={name} onChange={e => setName(e.target.value)}/>
-                        <span className='text-danger mb-3'>{nameError}</span><br/>
+                        <span className='text-danger'>{nameError} &nbsp;</span><br/>
                         <span className=''>e-mail</span>
                         <input className='input' name="mail" value={mail} onChange={e => setMail(e.target.value)}/>
-                        <span className='text-danger mb-3'>{mailError}</span><br/>
+                        <span className='text-danger'>{mailError} &nbsp;</span><br/>
                         <span className=''>message</span>
                         <textarea className='input text-area-height' name='content' value={mailContent} onChange={e => setMailContent(e.target.value)}/>
-                        <span className='text-danger mb-3'>{mailContentError}</span><br/>
+                        <span className='text-danger'>{mailContentError} &nbsp;</span><br/>
                         <div className="wrapper w-100">
                             {!loading ?
                                 <button onClick={sendMail} ref={buttonRef}>Send</button>

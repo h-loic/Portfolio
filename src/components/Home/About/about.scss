@@ -1,3 +1,40 @@
 #about-part{
     height: 100vh;
 }
+
+.content-about-part{
+    width: 80%;
+    justify-content: center;
+}
+
+.timeline-item{
+    height: 70vh;
+}
+
+.timeline-year{
+    color: #7BD3E3;
+    font-size: 1.5em;
+    height: 15vh;
+    display: block;
+}
+
+.timeline-content{
+    display: block;
+    color: #839192;
+    font-size: 1.5em;
+    height: 60vh;
+}
+
+@media (min-width: 0rem) {
+    .text-content{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 50rem) {
+    .text-content{
+        width: 50%;
+        margin: auto;
+    }
+}
