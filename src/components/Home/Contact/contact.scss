@@ -21,7 +21,7 @@
 .blue-border{
     border: solid 2px #7BD3E3;
     height: 10vh;
-    border-radius: 3px;
+    border-radius: 1em;
 }
 
 .contact-text{
@@ -34,7 +34,7 @@
 
 input{
     border: solid 2px #7BD3E3;
-    border-radius: 3px;
+    border-radius: 1em;
     background-color: rgb(1,24,50);
     width: 100%;
     color: #7BD3E3;
@@ -42,7 +42,7 @@ input{
 
 textarea{
     border: solid 2px #7BD3E3;
-    border-radius: 3px;
+    border-radius: 1em;
     background-color: rgb(1,24,50);
     width: 100%;
     color: #7BD3E3;
@@ -70,6 +70,7 @@ input::placeholder{
         position: relative;
         transition: all .35s;
         background-color: transparent;
+        border-radius: 1em;
       }
       
       button span{
