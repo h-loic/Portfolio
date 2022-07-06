@@ -19,9 +19,9 @@
 }
 
 .blue-border{
-    border: solid 2px #7BD3E3;
+    border: solid 1px #7BD3E3;
     height: 10vh;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 .contact-text{
@@ -33,16 +33,16 @@
 }
 
 input{
-    border: solid 2px #7BD3E3;
-    border-radius: 1em;
+    border: solid 1px #7BD3E3;
+    border-radius: 0.5em;
     background-color: rgb(1,24,50);
     width: 100%;
     color: #7BD3E3;
 }
 
 textarea{
-    border: solid 2px #7BD3E3;
-    border-radius: 1em;
+    border: solid 1px #7BD3E3;
+    border-radius: 0.5em;
     background-color: rgb(1,24,50);
     width: 100%;
     color: #7BD3E3;
@@ -64,13 +64,13 @@ input::placeholder{
         font-size: 18px;
         text-decoration: none;
         color: #7BD3E3;
-        border: 2px solid #7BD3E3;
+        border: 1px solid #7BD3E3;
         letter-spacing: 2px;
         text-align: center;
         position: relative;
         transition: all .35s;
         background-color: transparent;
-        border-radius: 1em;
+        border-radius: 0.5em;
       }
       
       button span{

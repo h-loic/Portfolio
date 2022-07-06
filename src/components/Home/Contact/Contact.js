@@ -153,7 +153,7 @@ export default function Contact() {
                     <div className='col-1 col-md-2'></div>
                 </div> 
             </div>
-            <div className='footer text-center light-grey' placeholder='zidugz'>
+            <div className='footer text-center light-gray' placeholder='zidugz'>
                 Designed & Build by Loïc Hug 
             </div>
         </div>

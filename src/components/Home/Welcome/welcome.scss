@@ -26,3 +26,50 @@
     position: absolute;
     margin-left: 5vh;
 }
+
+.geo-arrow {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-miterlimit: 10
+  }
+
+.arrow {
+    z-index: 1000;
+    opacity: 0.5;
+    position: absolute;
+  
+    &--top {
+      top: 0;
+      left: -5em;
+    }
+  
+    &--bottom {
+      bottom: 0;
+      right: 3em;
+    }
+  }
+
+  @keyframes bounce-1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+ 
+  
+  .bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+  }
+
+  .item-to {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+  }
