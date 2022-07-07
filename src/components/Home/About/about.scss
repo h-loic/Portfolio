@@ -30,11 +30,23 @@
         width: 80%;
         margin: auto;
     }
+    .timeline-title{
+        font-size: 0.7em;
+    }
+    .timeline-info{
+        font-size: 0.5em;
+    }
 }
 
 @media (min-width: 50rem) {
     .text-content{
         width: 50%;
         margin: auto;
+    }
+    .timeline-title{
+        font-size: 1.2em;
+    }
+    .timeline-info{
+        font-size: 1em;
     }
 }
