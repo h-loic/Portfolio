@@ -33,6 +33,8 @@ export default class Home extends React.Component {
             pageOnChange={this.handlePageChange}
             onBeforePageScroll={this.handleBeforePageChange}
             customPageNumber={this.state.currentPage}
+            animationTimer={700}
+            renderAllPagesOnFirstRender={false}
           >
             <Welcome/>
             <Skills/>
