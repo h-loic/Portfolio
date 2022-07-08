@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
 import './home.scss'
 import Header from '../../components/Header/Header'
 
@@ -8,42 +8,45 @@ import Welcome from '../../components/Home/Welcome/Welcome'
 import Skills from '../../components/Home/Skills/Skills';
 import Contact from '../../components/Home/Contact/Contact';
 import About from '../../components/Home/About/About';
+import Presentation from '../../components/Home/Presentation/Presentation';
 
-export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { currentPage: null };
-  }
+export default function Home() {
 
-  handlePageChange = number => {
-    this.setState({ currentPage: number });
+  const [currentPage, setCurrentPage] = useState(null);
+  const [isSmallScreen,setIsSmallScreen] = useState(false)
+
+  useEffect(() => {
+    if(window.innerWidth < 800){
+      setIsSmallScreen(true);
+    }
+  }, [])
+
+  const handlePageChange = number => {
+    setCurrentPage(number)
   };
 
-  handleBeforePageChange = number => {
-    console.log(number);
-  };
-
-  render() {
-
-    return (
-      <div className='home-container'>
-        <Header goToPage={this.handlePageChange}/>
-        <React.Fragment>
-          <ReactPageScroller
-            pageOnChange={this.handlePageChange}
-            onBeforePageScroll={this.handleBeforePageChange}
-            customPageNumber={this.state.currentPage}
-            animationTimer={700}
-            renderAllPagesOnFirstRender={false}
-          >
-            <Welcome/>
-            <Skills/>
-            <Projects/>
-            <About/>
-            <Contact/>
-          </ReactPageScroller>
-        </React.Fragment>
-      </div>
-    );
-  }
+  return (
+    <div className='home-container'>
+      <Header goToPage={handlePageChange}/>
+      <React.Fragment>
+        <ReactPageScroller
+          pageOnChange={handlePageChange}
+          customPageNumber={currentPage}
+          animationTimer={700}
+          renderAllPagesOnFirstRender={false}
+        >
+          <Welcome isSmallScreen={isSmallScreen} />
+          {isSmallScreen ?
+          <Presentation/>
+          :
+          null
+          }
+          <Skills/>
+          <Projects/>
+          <About/>
+          <Contact/>
+        </ReactPageScroller>
+      </React.Fragment>
+    </div>
+  );
 }

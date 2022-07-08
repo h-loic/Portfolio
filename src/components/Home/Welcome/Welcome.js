@@ -3,7 +3,9 @@ import './welcome.scss'
 import Typical from 'react-typical'
 import {IoMdCodeDownload} from 'react-icons/io'
 
-export default function Welcome() {
+export default function Welcome(props) {
+
+    console.log(props)
 
     return (
         <div id="welcome-part" className='container'>
@@ -30,6 +32,20 @@ export default function Welcome() {
                     </div>
                 </div>
                 <div className='col-12 col-md-7'>
+                    {!props.isSmallScreen ?
+
+                        <div className='row welcome-presentation h3'>
+                            <div className='col-2'></div>
+                            <div className='col-8'>
+                                <p>Hi,</p>
+                                <p>I am currently in my last year of engineering school, specializing in computer science.</p> 
+                                <p>I'm looking for a 6 month internship starting in February 2022 that could lead to a hiring</p>
+                            </div>
+                            <div className='col-2'></div>
+                        </div>
+                        :
+                        null    
+                    }
                 </div>
                 <div className='col-12 text-center'>
                     <div>scroll to see more</div>

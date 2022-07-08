@@ -2,21 +2,17 @@ import React, { useState } from 'react'
 import './skills.scss'
 import ReactCardCarousel from "react-card-carousel";
 import {MdOutlineArrowBackIos,MdOutlineArrowForwardIos} from 'react-icons/md'
-import { useVisibilityHook } from 'react-observer-api';
 
 export default function Skills() {
 
-    const { setElement, isVisible } = useVisibilityHook();
     const [Carousel,setCarousel] = useState(null)
 
         return (
-            <div ref={setElement} id="skills-part" className='container'>
+            <div id="skills-part" className='container'>
                 <div className='part-content row'>
                     <div className='text-center margin-header h1 part-title col-12'>
                         My Skills
                     </div>
-                    {isVisible ?
-                        <>
                             <div className='col-md-1 col-2 z-2 center' onClick={() => Carousel.prev()}>
                             <span>
                                 <MdOutlineArrowBackIos size={48} className='center vertical-align' />
@@ -111,12 +107,7 @@ export default function Skills() {
                             </div>
                             <div className='col-md-1 col-2 z-2 center' onClick={() => Carousel.next()}>
                                 <MdOutlineArrowForwardIos size={48} className='center vertical-align' />
-                            </div>
-                        </>
-                        :
-                        <div/>
-                    }
-                    
+                            </div>              
                 </div>
             </div>
         )
