@@ -3,7 +3,7 @@ import './skills.scss'
 import ReactCardCarousel from "react-card-carousel";
 import {MdOutlineArrowBackIos,MdOutlineArrowForwardIos} from 'react-icons/md'
 
-export default function Skills() {
+export default function Skills(props) {
 
     const [Carousel,setCarousel] = useState(null)
 
@@ -11,7 +11,7 @@ export default function Skills() {
             <div id="skills-part" className='container'>
                 <div className='part-content row'>
                     <div className='text-center margin-header h1 part-title col-12'>
-                        My Skills
+                        {props.dictionary.headerSkills}
                     </div>
                             <div className='col-md-1 col-2 z-2 center' onClick={() => Carousel.prev()}>
                             <span>
@@ -22,7 +22,7 @@ export default function Skills() {
                                 <ReactCardCarousel autoplay={ false } disable_keydown={true} ref={ Carousel => setCarousel(Carousel) }>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>Web development</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.webDevelopment}</div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/html.png")}/></div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/css.png")}/></div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/nodejs.jpg")}/></div>
@@ -37,7 +37,7 @@ export default function Skills() {
                                     </div>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>Databases</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.databases}</div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/mongodb.webp")}/></div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/mysql.png")}/></div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/firebase.png")}/></div>
@@ -49,7 +49,7 @@ export default function Skills() {
                                     </div>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>Programming languages</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.programmingLanguages}</div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/java.png")}/></div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/c.png")}/></div>
                                             <div className='col-6 col-md-4 text-center'><img className='w-33 icons-margin' alt='icon' src={require("../../../assets/img/icons/c++.png")}/></div>
@@ -60,7 +60,7 @@ export default function Skills() {
                                     </div>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>project management</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.projectManagement}</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Scrum</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>UML</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>OCL</div>
@@ -76,7 +76,7 @@ export default function Skills() {
                                     </div>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>Soft Skills</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.softSkills}</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Teamwork</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Patient</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Calm</div>
@@ -84,7 +84,7 @@ export default function Skills() {
                                     </div>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>Languages</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.languages}</div>
                                             <div className='col-12 text-center icons-margin'>French Native</div>
                                             <div className='col-12 text-center icons-margin'>English B2 (2021)</div>
                                             <div className='col-12 text-center'><img className='w-33' alt='icon' src={require("../../../assets/img/icons/linguaskill.jpg")}/></div>
@@ -94,7 +94,7 @@ export default function Skills() {
                                     </div>
                                     <div className='box'>
                                         <div className='row d-flex'>
-                                            <div className='col-12 text-center h3'>Knowledge</div>
+                                            <div className='col-12 text-center h3'>{props.dictionary.knowledges}</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Design Pattern</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Restful API</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Object-oriented</div>

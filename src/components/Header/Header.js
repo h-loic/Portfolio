@@ -4,14 +4,14 @@ import {BsGithub} from 'react-icons/bs'
 import {BsLinkedin} from 'react-icons/bs'
 import {AiOutlineDownload} from 'react-icons/ai'
 import ReactFlagsSelect from "react-flags-select";
+import { useLanguage } from '../../context/languageContext'
 
 export default function Header(props) {
 
-    const [select, setSelect] = useState("GB");
+    const { userLanguage, setUserLanguage, dictionary } = useLanguage();
 
     const onSelect = (code) =>{
-        console.log(code);
-        setSelect(code);
+        setUserLanguage(code);
     } 
 
     const [isOpen,setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ export default function Header(props) {
                     <nav>
                         <ReactFlagsSelect
                             className='nav-item flag align-bottom'
-                            selected={select}
+                            selected={userLanguage}
                             onSelect={onSelect}
                             countries={["GB", "FR", "DE"]}
                             showOptionLabel={false}
@@ -49,16 +49,6 @@ export default function Header(props) {
                             selectedSize={28}
                             optionsSize={28}
                             alignOptionsToRight={false}
-                            /*showSelectedLabel={showSelectedLabel}
-                            selectedSize={selectedSize}
-                            showOptionLabel={showOptionLabel}
-                            optionsSize={optionsSize}
-                            placeholder={placeholder}
-                            searchable={searchable}
-                            searchPlaceholder={searchPlaceholder}
-                            alignOptionsToRight={alignOptionsToRight}
-                            fullWidth={fullWidth}
-                            disabled={disabled} */
                         />
                         <a href="https://github.com/h-loic" className='nav-item'>
                             <BsGithub size={28} className='center'/>
@@ -89,11 +79,11 @@ export default function Header(props) {
                         height : isOpen ? "100%" : "0%"
                     }}>
                     <div className="overlay-content">
-                        <span onClick={() => goToPage(0)}>Home</span>
-                        <span onClick={() => goToPage(1)}>My Skills</span>
-                        <span onClick={() => goToPage(2)}>My Projects</span>
-                        <span onClick={() => goToPage(3)}>About Me</span>
-                        <span onClick={() => goToPage(4)}>Contact Me</span>
+                        <span onClick={() => goToPage(0)}>{dictionary.headerHome}</span>
+                        <span onClick={() => goToPage(1)}>{dictionary.headerSkills}</span>
+                        <span onClick={() => goToPage(2)}>{dictionary.headerProjects}</span>
+                        <span onClick={() => goToPage(3)}>{dictionary.headerAboutMe}</span>
+                        <span onClick={() => goToPage(4)}>{dictionary.headerContactMe}</span>
                         <div className='row menu-icons'>
                             <div className='col-1'/>
                             <a href='https://github.com/h-loic' className='col-3'><BsGithub size={28} className='icon'/></a>

@@ -16,7 +16,7 @@ export default function Welcome(props) {
                         </span><br/>
                         <span className='h2'>
                             <Typical
-                                steps={['Software Engineer', 2000, 'Software Engineer soon']}
+                                steps={[props.dictionary.mainTitle, 2000, props.dictionary.mainTitleMore]}
                                 loop={1}
                                 wrapper="p"
                                 className='mt-5'
@@ -35,9 +35,9 @@ export default function Welcome(props) {
                         <div className='row welcome-presentation h3'>
                             <div className='col-2'></div>
                             <div className='col-8'>
-                                <p>Hi,</p>
-                                <p>I am currently in my last year of engineering school, specializing in computer science.</p> 
-                                <p>I'm looking for a 6 month internship starting in February 2022 that could lead to a hiring</p>
+                                <p>{props.dictionary.hi}</p>
+                                <p>{props.dictionary.presentation1}</p> 
+                                <p>{props.dictionary.presentation2}</p>
                             </div>
                             <div className='col-2'></div>
                         </div>
@@ -46,7 +46,7 @@ export default function Welcome(props) {
                     }
                 </div>
                 <div className='col-12 text-center'>
-                    <div>scroll to see more</div>
+                    <div>{props.dictionary.seeMore}</div>
                     <IoMdCodeDownload size={28} className='center'/>
                 </div>
             </div>

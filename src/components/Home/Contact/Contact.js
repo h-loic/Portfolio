@@ -4,7 +4,7 @@ import {GoLocation} from 'react-icons/go'
 import {MdMailOutline} from 'react-icons/md'
 import Axios from 'axios'
 
-export default function Contact() {
+export default function Contact(props) {
 
     const buttonRef = useRef();
     const svgRef = useRef();
@@ -28,22 +28,22 @@ export default function Contact() {
         setValidation("");
         let error = false;
         if(name === ""){
-            setNameError("your name is mandatory");
+            setNameError(props.dictionary.nameError);
             error = true;
         }else{
             setNameError("");
         }
         if(mail === ""){
-            setMailError("your mail is mandatory");
+            setMailError(props.dictionary.mailError);
             error = true;
         }else if (!checkMailFormat(mail)){
-            setMailError("enter a valid e-mail format");
+            setMailError(props.dictionary.mailError2);
             error = true;
         }else{
             setMailError("");
         }
         if(mailContent === ""){
-            setMailContentError("the mail content is mandatory");
+            setMailContentError(props.dictionary.contentError);
             error = true;
         }else{
             setMailContentError("");
@@ -54,7 +54,7 @@ export default function Contact() {
                     setName("");
                     setMail("");
                     setMailContent("");
-                    setValidation("thank you for your interest, your mail has been sent !")
+                    setValidation(props.dictionary.mailValidation)
                 })
             } catch (error) {
                 console.error(error);
@@ -68,7 +68,7 @@ export default function Contact() {
         <div id="contact-part">
             <div className='row'>
                 <div className='text-center margin-header h1 part-title col-12'>
-                    Contact Me
+                    {props.dictionary.headerContactMe}
                 </div>
             </div>
             <div className='content-part container'>
@@ -90,14 +90,14 @@ export default function Contact() {
                 <div className='row mt-4'>
                     <div className='col-1 col-md-2'></div>
                     <div className='col-10 col-md-8 text-light light-blue contact-info-text'>
-                        Interested in working together? Fill out the form below.
+                        {props.dictionary.workTogether}
                     </div>
                     <div className='col-1 col-md-2'></div>
                 </div> 
                 <div className='row mt-2'>
                     <div className='col-1 col-md-2'></div>
                     <div className='col-10 col-md-8 light-blue'>
-                        <span className=''>Name</span>
+                        <span className=''>{props.dictionary.name}</span>
                         <input className='input' name="name" value={name} onChange={e => setName(e.target.value)}/>
                         <span className='text-danger'>{nameError} &nbsp;</span><br/>
                         <span className=''>e-mail</span>
@@ -108,7 +108,7 @@ export default function Contact() {
                         <span className='text-danger'>{mailContentError} &nbsp;</span><br/>
                         <div className="wrapper w-100">
                             {!loading ?
-                                <button onClick={sendMail} ref={buttonRef}>Send</button>
+                                <button onClick={sendMail} ref={buttonRef}>{props.dictionary.send}</button>
                                 :
                                 <svg ref={svgRef} className='loader' version="1.1" id="L7" x="0px" y="0px"
                                     viewBox="0 0 100 100"  >

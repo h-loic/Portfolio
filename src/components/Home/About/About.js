@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-export default function About() {
+export default function About(props) {
 
     var settings = {
         dots: true,
@@ -16,7 +16,7 @@ export default function About() {
         <div id="about-part">
             <div className='part-content row'>
                 <div className='text-center margin-header h1 part-title col-12'>
-                    About Me
+                    {props.dictionary.headerAboutMe}
                 </div>
                 <div className='content-about-part container'>
                     <Slider {...settings} >
@@ -40,8 +40,7 @@ export default function About() {
                                     <p className='dark-gray timeline-title'>IUT Belfort-Montbéliard - Cegep de Matane</p>
                                     <p className='dark-gray timeline-title'>Belfort (FR) / Matane (QC)</p>
                                     <p className='light-red timeline-title'>DUT Informatique - 120 ECTS</p>
-                                    <p className='dark-gray mt-4 timeline-info'>fundamental math tools / web development / system and networks / advanced algorithms
-                                     / database / server side web programming / optimization technique / distributed programming
+                                    <p className='dark-gray mt-4 timeline-info'>{props.dictionary.dutKnowledge}
                                     </p>
                                 </div>
                             </div>
@@ -52,9 +51,9 @@ export default function About() {
                                 <div className='text-content'>
                                     <p className='dark-gray timeline-title'>Université de Technologie de Belfort-Montbéliard (UTBM)</p>
                                     <p className='dark-gray timeline-title'>Belfort (FR)</p>
-                                    <p className='light-red timeline-title'>Engineering cours (Scientific knowledge)</p>
+                                    <p className='light-red timeline-title'>{props.dictionary.engineeringCourse1}</p>
                                     <p className='dark-gray mt-4 timeline-info'>
-                                    object-oriented programming / Statistics for the engineer / embedded computing / Human-Computer Interface / Networks and Cybersecurity
+                                        {props.dictionary.UTBMKnowledge}
                                     </p>
                                 </div>
                             </div>
@@ -64,11 +63,10 @@ export default function About() {
                             <div className='timeline-content justify-content-center'>
                                 <div className='text-content'>
                                     <p className='dark-gray timeline-title'>BASF Schweiz AG</p>
-                                    <p className='dark-gray timeline-title'>Basel (CH)</p>
-                                    <p className='light-red timeline-title'>6 month internship as an assistant engineer</p>
+                                    <p className='dark-gray timeline-title'>{props.dictionary.basel} (CH)</p>
+                                    <p className='light-red timeline-title'>{props.dictionary.ST40}</p>
                                     <p className='dark-gray mt-4 timeline-info'>
-                                        Migration of an existing application dashboard into the BASF Cloud along with modernization of the technologies. 
-                                        The old application is an ASP.NET MVC 5 web application, possible migration to ASP.NET Core Blazor.
+                                        {props.dictionary.traineeSubject}
                                     </p>
                                 </div>
                             </div>
@@ -79,9 +77,9 @@ export default function About() {
                                 <div className='text-content'>
                                     <p className='dark-gray timeline-title'>Université de Technologie de Belfort-Montbéliard (UTBM)</p>
                                     <p className='dark-gray timeline-title'>Belfort (FR)</p>
-                                    <p className='light-red timeline-title'>Engineering cours (Techniques and methods)</p>
+                                    <p className='light-red timeline-title'>{props.dictionary.engineeringCourse2}</p>
                                     <p className='dark-gray mt-4 timeline-info'>
-                                        Software deployment methods and tools
+                                        {props.dictionary.UTBMSpe1}
                                     </p>
                                 </div>
                             </div>
