@@ -3,8 +3,16 @@ import './header.scss'
 import {BsGithub} from 'react-icons/bs'
 import {BsLinkedin} from 'react-icons/bs'
 import {AiOutlineDownload} from 'react-icons/ai'
+import ReactFlagsSelect from "react-flags-select";
 
 export default function Header(props) {
+
+    const [select, setSelect] = useState("GB");
+
+    const onSelect = (code) =>{
+        console.log(code);
+        setSelect(code);
+    } 
 
     const [isOpen,setIsOpen] = useState(false);
     const [checked, setChecked] = useState(false);
@@ -30,6 +38,28 @@ export default function Header(props) {
                 <div className="responsive-container">
                     <h1 onClick={() => goHome()}>Loïc Hug</h1>
                     <nav>
+                        <ReactFlagsSelect
+                            className='nav-item flag align-bottom'
+                            selected={select}
+                            onSelect={onSelect}
+                            countries={["GB", "FR", "DE"]}
+                            showOptionLabel={false}
+                            showSelectedLabel={false}
+                            fullWidth={false}
+                            selectedSize={28}
+                            optionsSize={28}
+                            alignOptionsToRight={false}
+                            /*showSelectedLabel={showSelectedLabel}
+                            selectedSize={selectedSize}
+                            showOptionLabel={showOptionLabel}
+                            optionsSize={optionsSize}
+                            placeholder={placeholder}
+                            searchable={searchable}
+                            searchPlaceholder={searchPlaceholder}
+                            alignOptionsToRight={alignOptionsToRight}
+                            fullWidth={fullWidth}
+                            disabled={disabled} */
+                        />
                         <a href="https://github.com/h-loic" className='nav-item'>
                             <BsGithub size={28} className='center'/>
                         </a>

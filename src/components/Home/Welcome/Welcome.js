@@ -5,8 +5,6 @@ import {IoMdCodeDownload} from 'react-icons/io'
 
 export default function Welcome(props) {
 
-    console.log(props)
-
     return (
         <div id="welcome-part" className='container'>
             <div className='row justify-content-center'>
