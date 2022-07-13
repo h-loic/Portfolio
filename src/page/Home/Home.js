@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <div className='home-container'>
-      <Header goToPage={handlePageChange}/>
+      <Header goToPage={handlePageChange} isSmallScreen={isSmallScreen}/>
       <React.Fragment>
         <ReactPageScroller
           pageOnChange={handlePageChange}

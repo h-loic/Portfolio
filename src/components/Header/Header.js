@@ -79,11 +79,23 @@ export default function Header(props) {
                         height : isOpen ? "100%" : "0%"
                     }}>
                     <div className="overlay-content">
-                        <span onClick={() => goToPage(0)}>{dictionary.headerHome}</span>
-                        <span onClick={() => goToPage(1)}>{dictionary.headerSkills}</span>
-                        <span onClick={() => goToPage(2)}>{dictionary.headerProjects}</span>
-                        <span onClick={() => goToPage(3)}>{dictionary.headerAboutMe}</span>
-                        <span onClick={() => goToPage(4)}>{dictionary.headerContactMe}</span>
+                        { !props.isSmallScreen ?
+                            <>
+                                <span onClick={() => goToPage(0)}>{dictionary.headerHome}</span>
+                                <span onClick={() => goToPage(1)}>{dictionary.headerSkills}</span>
+                                <span onClick={() => goToPage(2)}>{dictionary.headerProjects}</span>
+                                <span onClick={() => goToPage(3)}>{dictionary.headerAboutMe}</span>
+                                <span onClick={() => goToPage(4)}>{dictionary.headerContactMe}</span>
+                            </>
+                        :
+                            <>
+                                <span onClick={() => goToPage(0)}>{dictionary.headerHome}</span>
+                                <span onClick={() => goToPage(2)}>{dictionary.headerSkills}</span>
+                                <span onClick={() => goToPage(3)}>{dictionary.headerProjects}</span>
+                                <span onClick={() => goToPage(4)}>{dictionary.headerAboutMe}</span>
+                                <span onClick={() => goToPage(5)}>{dictionary.headerContactMe}</span>
+                            </>
+                        }
                         <div className='row menu-icons'>
                             <div className='col-1'/>
                             <a href='https://github.com/h-loic' className='col-3'><BsGithub size={28} className='icon'/></a>
