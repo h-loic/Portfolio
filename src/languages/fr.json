@@ -45,5 +45,6 @@
     "contentError" : "le contenu du mail est obligatoire",
     "send" : "Envoyer",
     "mailValidation" : "merci pour votre intérêt, votre mail a été envoyé !",
-    "visit" : "visiter"
+    "visit" : "visiter",
+    "technologyUsed" : "Technologie utilisé :"
 }

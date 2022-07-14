@@ -45,5 +45,6 @@
     "contentError" : "the mail content is mandatory",
     "send" : "Send",
     "mailValidation" : "thank you for your interest, your mail has been sent !",
-    "visit" : "visit"
+    "visit" : "visit",
+    "technologyUsed" : "Technology used :"
 }

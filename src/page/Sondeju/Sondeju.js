@@ -41,12 +41,15 @@ export default function Sondeju() {
                 <div className='col-1'/>
                 <div className='col-10 mt-5'>
                     <Slider {...settings}>
-                        <img className='p-1' src={require("../../assets/img/projects/sondejuWelcome.png")}></img>
-                        <img className='p-1' src={require("../../assets/img/projects/sondejuCreation.png")}></img>
-                        <img className='p-1' src={require("../../assets/img/projects/sondejuResult.png")}></img>
+                        <img className='p-1' alt='sondeju1' src={require("../../assets/img/projects/sondejuWelcome.png")}></img>
+                        <img className='p-1' alt='sondeju2' src={require("../../assets/img/projects/sondejuCreation.png")}></img>
+                        <img className='p-1' alt='sondeju3' src={require("../../assets/img/projects/sondejuResult.png")}></img>
                     </Slider>
                 </div>
                 <div className='col-1'/>
+                <div className='col-12 project-page-description text-white mt-5 mb-5'>
+                    {location.state.dictionary.technologyUsed} <br/> ReactJS, Fastify, nodeJS, mongoose, mongoDB, Redux
+                </div>
             </div>
         </div>
     )

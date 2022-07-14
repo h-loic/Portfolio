@@ -45,5 +45,6 @@
     "contentError" : "der Inhalt der E-Mail ist obligatorisch",
     "send" : "Senden",
     "mailValidation" : "Vielen Dank für Ihr Interesse, Ihre Mail wurde abgeschickt!",
-    "visit" : "besuchen"
+    "visit" : "besuchen",
+    "technologyUsed" : "Verwendete Technologie"
 }
