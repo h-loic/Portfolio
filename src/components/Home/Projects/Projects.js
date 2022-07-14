@@ -65,7 +65,7 @@ export default function Projects(props) {
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}6`}>
                             <div className={`project-title ${revealInner}6 ${invisible}`}>{props.dictionary.digitErgo}</div>
-                            <span className={`more-info ${revealInner}6 ${invisible}`}>{props.dictionary.moreInfo}</span>
+                            <span className={`more-info ${revealInner}6 ${invisible}`} onClick={() => navigate("/digitErgo",{state:{dictionary:props.dictionary}})}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
