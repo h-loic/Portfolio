@@ -40,3 +40,15 @@
 .button-87:active {
   transform: scale(0.95);
 }
+
+@media (min-width: 0rem) {
+    .video{
+        height: 30vh;
+    }
+}
+
+@media (min-width: 50rem) {
+    .video{
+        height: 50vh;
+    }
+}

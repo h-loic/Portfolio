@@ -5,6 +5,7 @@ import "./app.scss";
 import {LanguageProvider} from './context/languageContext'
 import Sondeju from './page/Sondeju/Sondeju';
 import MobileApp from './page/mobileApp/mobileApp';
+import Terragenesis from './page/TerraGenesis/Terragenesis';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path='/' element={<LanguageProvider><Home/></LanguageProvider>}></Route>
           <Route exact path='/sondeju' element={<LanguageProvider><Sondeju/></LanguageProvider>}></Route>
           <Route exact path='/mobileApp' element={<LanguageProvider><MobileApp/></LanguageProvider>}></Route>
+          <Route exact path='/terragenesis' element={<LanguageProvider><Terragenesis/></LanguageProvider>}></Route>
         </Routes>
       </Router>
   );

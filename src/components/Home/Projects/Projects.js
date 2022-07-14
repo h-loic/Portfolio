@@ -44,7 +44,7 @@ export default function Projects(props) {
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}3`}>
                             <div className={`project-title ${revealInner}3 ${invisible}`}>{props.dictionary.terraGenesis}</div>
-                            <span className={`more-info ${revealInner}3 ${invisible}`}>{props.dictionary.moreInfo}</span>
+                            <span className={`more-info ${revealInner}3 ${invisible}`} onClick={() => navigate("/terragenesis",{state:{dictionary:props.dictionary}})}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
@@ -72,7 +72,6 @@ export default function Projects(props) {
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}7`}>
                             <div className={`project-title ${revealInner}7 ${invisible}`}>{props.dictionary.tp}</div>
-                            <span className={`more-info ${revealInner}7 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
                     </div>    
