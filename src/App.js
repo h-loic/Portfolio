@@ -7,6 +7,7 @@ import Sondeju from './page/Sondeju/Sondeju';
 import MobileApp from './page/mobileApp/mobileApp';
 import Terragenesis from './page/TerraGenesis/Terragenesis';
 import Ecommerce from './page/Ecommerce/Ecommerce';
+import Asd from './page/ASD/Asd';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/mobileApp' element={<LanguageProvider><MobileApp/></LanguageProvider>}></Route>
           <Route exact path='/terragenesis' element={<LanguageProvider><Terragenesis/></LanguageProvider>}></Route>
           <Route exact path='/greenIT' element={<LanguageProvider><Ecommerce/></LanguageProvider>}></Route>
+          <Route exact path='/asd' element={<LanguageProvider><Asd/></LanguageProvider>}></Route>
         </Routes>
       </Router>
   );
