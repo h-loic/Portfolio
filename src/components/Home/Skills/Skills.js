@@ -80,6 +80,10 @@ export default function Skills(props) {
                                             <div className='col-6 col-md-4 text-center icons-margin'>Teamwork</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Patient</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Calm</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Problem-solving</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Work ethic</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Adaptability</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Problem-solving</div>
                                         </div>
                                     </div>
                                     <div className='box'>
