@@ -30,7 +30,7 @@ export default function Projects(props) {
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}`} >
                             <div className={`project-title ${revealInner} ${invisible}`}>{props.dictionary.surveyProject}</div>
-                            <span className={`more-info ${revealInner} ${invisible}`} onClick={() => navigate("/sondeju")}>{props.dictionary.moreInfo}</span>
+                            <span className={`more-info ${revealInner} ${invisible}`} onClick={() => navigate("/sondeju",{state:{dictionary:props.dictionary}})}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 

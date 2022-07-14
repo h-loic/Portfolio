@@ -44,5 +44,6 @@
     "mailError2" : "entrez un format d'e-mail valide",
     "contentError" : "le contenu du mail est obligatoire",
     "send" : "Envoyer",
-    "mailValidation" : "merci pour votre intérêt, votre mail a été envoyé !"
+    "mailValidation" : "merci pour votre intérêt, votre mail a été envoyé !",
+    "visit" : "visiter"
 }

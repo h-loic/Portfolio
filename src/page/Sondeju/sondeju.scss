@@ -1,3 +1,42 @@
 .project-containter{
     height: 100vh;
 }
+
+.project-page-title{
+    font-size: 3em;
+}
+
+.project-page-description{
+    font-size: 1.2em;
+}
+
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px RGB(255, 172, 124);
+  background-image: linear-gradient(45deg, RGB(255, 172, 124) 0%, #F09819  51%, RGB(255, 172, 124)  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+}
+
+.button-87:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}
