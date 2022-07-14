@@ -1,8 +1,11 @@
 import React,{useEffect, useState} from 'react'
 import './projects.scss'
 import { useVisibilityHook } from 'react-observer-api';
+import { useNavigate } from "react-router-dom";
 
 export default function Projects(props) {
+
+    const navigate = useNavigate(); 
 
     const { setElement, isVisible } = useVisibilityHook();
     const [reveal,setReveal] = useState("")
@@ -27,49 +30,49 @@ export default function Projects(props) {
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}`} >
                             <div className={`project-title ${revealInner} ${invisible}`}>{props.dictionary.surveyProject}</div>
-                            <a className={`more-info ${revealInner} ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner} ${invisible}`} onClick={() => navigate("/sondeju")}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}2`}>
                             <div className={`project-title ${revealInner}2 ${invisible}`}>{props.dictionary.mobileProject}</div>
-                            <a className={`more-info ${revealInner}2 ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner}2 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}3`}>
                             <div className={`project-title ${revealInner}3 ${invisible}`}>{props.dictionary.terraGenesis}</div>
-                            <a className={`more-info ${revealInner}3 ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner}3 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}4`}>
                             <div className={`project-title ${revealInner}4 ${invisible}`}>{props.dictionary.greenIT}</div>
-                            <a className={`more-info ${revealInner}4 ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner}4 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}5`}>
                             <div className={`project-title ${revealInner}5 ${invisible}`}>{props.dictionary.asdWebSite}</div>
-                            <a className={`more-info ${revealInner}5 ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner}5 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}6`}>
                             <div className={`project-title ${revealInner}6 ${invisible}`}>{props.dictionary.digitErgo}</div>
-                            <a className={`more-info ${revealInner}6 ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner}6 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
 
                         <div className='col-1 col-md-2'/>
                         <div className={`project-box block col-10 col-md-8 ${reveal}7`}>
                             <div className={`project-title ${revealInner}7 ${invisible}`}>{props.dictionary.tp}</div>
-                            <a className={`more-info ${revealInner}7 ${invisible}`}>{props.dictionary.moreInfo}</a>
+                            <span className={`more-info ${revealInner}7 ${invisible}`}>{props.dictionary.moreInfo}</span>
                         </div>
                         <div className='col-1 col-md-2'/>
                     </div>    

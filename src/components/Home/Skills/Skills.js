@@ -79,11 +79,13 @@ export default function Skills(props) {
                                             <div className='col-12 text-center h3'>{props.dictionary.softSkills}</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Teamwork</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Patient</div>
-                                            <div className='col-6 col-md-4 text-center icons-margin'>Calm</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Calmness</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Problem-solving</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Work ethic</div>
                                             <div className='col-6 col-md-4 text-center icons-margin'>Adaptability</div>
-                                            <div className='col-6 col-md-4 text-center icons-margin'>Problem-solving</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Self-management</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Optimism</div>
+                                            <div className='col-6 col-md-4 text-center icons-margin'>Authenticity</div>
                                         </div>
                                     </div>
                                     <div className='box'>
