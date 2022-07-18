@@ -50,7 +50,8 @@ export default function Contact(props) {
         }
         if(!error){
             try {
-                await Axios.post("http://localhost:4000/send_mail",{mailContent : mailContent, name : name, mail : mail}).then(res=>{
+                await Axios.post("https://h-loic-api.herokuapp.com/send_mail",{mailContent : mailContent, name : name, mail : mail}).then(res=>{
+                    console.log(res)
                     setName("");
                     setMail("");
                     setMailContent("");
