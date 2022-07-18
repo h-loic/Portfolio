@@ -32,9 +32,11 @@ export default function Sondeju() {
                 <div className='col-12 text-center'>
                     <span className='text-white project-page-title'>Sondeju</span>
                 </div>
+                {/*
                 <div className='col-12 mt-2'>
                     <a href='https://sondeju.netlify.app/' class="button-87" role="button">{location.state.dictionary.visit}</a>
                 </div>
+                */}
                 <div className='col-12 mt-2'>
                     <span className='text-white project-page-description'>{location.state.dictionary.surveyProject}</span>
                 </div>
