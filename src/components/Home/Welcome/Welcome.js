@@ -25,7 +25,7 @@ export default function Welcome(props) {
                     </div>
                     <div className='col-md-1'></div>
                     <div className='floating-words col-md-12 col-10 mr-0 ml-0 center'>
-                        <img className="rounded-circle h-75 picture align-middle" alt="myself" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwLPb-S9685XGc7ZrJ-dYgeecoptb2tZ91ow&usqp=CAU"
+                        <img className="rounded-circle h-75 picture align-middle" alt="myself" src={require("../../../assets/img/me2.jpg")}
                             data-holder-rendered="true"/>
                     </div>
                 </div>
