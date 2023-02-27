@@ -2,6 +2,7 @@ import React, {useRef, useState } from 'react'
 import './contact.scss'
 import {GoLocation} from 'react-icons/go'
 import {MdMailOutline} from 'react-icons/md'
+import {BsLinkedin} from 'react-icons/bs'
 import Axios from 'axios'
 
 export default function Contact(props) {
@@ -76,18 +77,39 @@ export default function Contact(props) {
                 <div className='row justify-content-center'>
                     <div className='col-1 col-md-2'></div>
                     <div className='col-10 col-md-8 row justify-content-center'>
+                        {/* 
                         <div className='col-5 blue-border text-center row m-0'>
                             <GoLocation size={28} className='center light-blue m-auto'/>
                             <span className='light-blue contact-text'>Moernach</span>
                         </div>
                         <div className='col-2'></div>
-                        <div className='col-5 blue-border text-center row m-0'>
-                            <MdMailOutline size={28} className='center light-blue m-auto'/>
+                        */}
+                        <div className='col-10 blue-border text-center row m-0 h3'>
+                            <MdMailOutline size={36} className='center light-blue m-auto'/>
                             <span className='light-blue contact-text'>h-loic@orange.fr</span>
                         </div>
                     </div>
                     <div className='col-1 col-md-2'></div>
                 </div>
+                <div className='row justify-content-center mt-5'>
+                    <div className='col-1 col-md-2'></div>
+                    <div className='col-10 col-md-8 row justify-content-center'>
+                        {/* 
+                        <div className='col-5 blue-border text-center row m-0'>
+                            <GoLocation size={28} className='center light-blue m-auto'/>
+                            <span className='light-blue contact-text'>Moernach</span>
+                        </div>
+                        <div className='col-2'></div>
+                        */}
+                        <div className='col-10 blue-border text-center row m-0 h3'>
+                            <BsLinkedin size={36} className='center light-blue m-auto'/>
+                            <span className='light-blue contact-text'>Loïc Hug</span>
+                        </div>
+                    </div>
+                    <div className='col-1 col-md-2'></div>
+                </div>
+                {/*
+                
                 <div className='row mt-4'>
                     <div className='col-1 col-md-2'></div>
                     <div className='col-10 col-md-8 text-light light-blue contact-info-text'>
@@ -153,6 +175,7 @@ export default function Contact(props) {
                     </div>
                     <div className='col-1 col-md-2'></div>
                 </div> 
+                */}
             </div>
             <div className='footer text-center light-gray' placeholder='zidugz'>
                 Designed & Build by Loïc Hug 
